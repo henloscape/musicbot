@@ -11,7 +11,7 @@ env:
   GitHubName: ${{ secrets.GitHubName }}
   BTOKEN: ${{ secrets.BotToken }}
   APIID: ${{ secrets.APIID }}
-  APIHASH:${{ secrets.APIHASH }}
+  APIHASH: ${{ secrets.APIHASH }}
 
 jobs:
   debug:
