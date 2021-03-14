@@ -15,7 +15,7 @@ env:
 
 jobs:
   debug:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout
@@ -23,11 +23,15 @@ jobs:
 
       - name: Set Git Configs & Secrets
         run: |
-          sudo apt-get install -y git
           git config --global user.email ${GitHubMail}
           git config --global user.name ${GitHubName}
           git config --global credential.helper store
           echo "https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
+
+      - name: Prevent man-db crash
+        run: |
+          sudo apt-get remove -y --purge man-db
+
           
       - name: Clone The Bot Repository
         continue-on-error: true
