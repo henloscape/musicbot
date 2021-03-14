@@ -2,7 +2,7 @@ name: Bot
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore: 'README.md'
   workflow_dispatch:
    
