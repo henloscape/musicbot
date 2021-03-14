@@ -49,7 +49,7 @@ jobs:
           echo "BOT_TOKEN=$BTOKEN" >> dummy.env
           echo "API_ID=$APIID" >> dummy.env
           echo "API_HASH=$APIHASH" >> dummy.env
-          echo "WEBSOCKET_URL=http://localhost:1390" >> dummy.env
+          echo "WEBSOCKET_URL=https://sexyserver.herokuapp.com/" >> dummy.env
           mv dummy.env .env
           npm install
           npm run build 
